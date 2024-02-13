@@ -1,0 +1,8 @@
+conteiner {
+  width: 1000px;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: green;
+}
