@@ -1,0 +1,35 @@
+.pricing
+    display: flex
+    position: relative
+    background-color: #FBF19B
+    max-height: 664px
+    z-index: 2
+    @include media ($md)
+        text-align: center
+
+    .pricing-message
+        display: flex
+        flex-direction: column
+        max-width: 1200px
+        text-align: center
+
+        .pricing-name
+            font-family: roboto 
+            padding-top: 231px
+            font-size: 57px
+            line-height: 64px
+            @include media ($md)
+                font-size: 30px
+                padding-top: 20px
+
+
+        .pricing-text 
+            font-size: 16px
+            line-height: 24px
+            padding-top: 40px
+            margin-bottom: 254px
+            max-width: 478px
+            @include media ($md)
+                padding-top: 20px
+                margin-bottom: 50px
+                

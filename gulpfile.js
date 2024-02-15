@@ -1,4 +1,4 @@
-const {src, dest, watch, parallel, series} = require('gulp');      //основной плагин, serias щтвечает за последовательность. 
+const {src, dest, watch, parallel, series} = require ('gulp');     //основной плагин, serias щтвечает за последовательность. 
 const sass = require('gulp-sass')(require('sass'));        //плагин для стилей
 const concat = require('gulp-concat')                      //плагин для переименований и минификаций файлов, еще он вроде объединять умеет. 
 const uglify = require('gulp-uglify-es').default;          // плагин для js 

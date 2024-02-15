@@ -1,0 +1,60 @@
+.question-answer-box
+    display: flex
+    justify-content: space-between
+    margin-bottom: -160px
+    @include media ($sm)
+        margin-bottom: -60px
+
+    @include media ($lg)
+       flex-direction: column
+
+    .question-answer-first
+        .question-answer-first-img
+            margin: 250px 60px 350px 0
+            @include media ($lg)
+                display: flex
+                margin: 15px 0 15px 0
+                justify-content: center
+
+    .question-answer-second
+        display: flex
+        flex-direction: column
+        margin-top: 165px
+        @include media ($lg)
+            margin-left: 0
+            align-items: center
+            margin-top: 20px
+        
+         
+        .question-answer-second-name
+            font-family: roboto
+            font-size: 48px
+            padding-bottom: 90px
+            max-width: 349px
+            @include media ($lg)
+                max-width: auto
+                padding-bottom: 20px
+
+
+        .question-answer-second-text
+            font-size: 17px
+            line-height: 27px
+            max-width: 322px
+            padding-bottom: 18px
+            @include media ($lg)
+                max-width: auto
+
+        .question-answer-second-img
+            display: flex
+            position: relative
+            z-index: 1
+            .question-answer-second-img_text
+                position: absolute
+                padding-top: 28px
+                color: #504F4F
+                font-size: 12px
+                line-height: 15.6px
+                max-width: 349px
+                @include media ($sm)
+                    padding-top: 0
+
