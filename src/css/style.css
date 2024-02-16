@@ -402,7 +402,7 @@ img {
   }
 }
 
-.pricing {
+.pricing-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -412,11 +412,11 @@ img {
   z-index: 2;
 }
 @media screen and (max-width: 767px) {
-  .pricing {
+  .pricing-box {
     text-align: center;
   }
 }
-.pricing .pricing-message {
+.pricing-box .pricing-message {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -427,19 +427,19 @@ img {
   max-width: 1200px;
   text-align: center;
 }
-.pricing .pricing-message .pricing-name {
+.pricing-box .pricing-message .pricing-name {
   font-family: roboto;
   padding-top: 231px;
   font-size: 57px;
   line-height: 64px;
 }
 @media screen and (max-width: 767px) {
-  .pricing .pricing-message .pricing-name {
+  .pricing-box .pricing-message .pricing-name {
     font-size: 30px;
     padding-top: 20px;
   }
 }
-.pricing .pricing-message .pricing-text {
+.pricing-box .pricing-message .pricing-text {
   font-size: 16px;
   line-height: 24px;
   padding-top: 40px;
@@ -447,7 +447,7 @@ img {
   max-width: 478px;
 }
 @media screen and (max-width: 767px) {
-  .pricing .pricing-message .pricing-text {
+  .pricing-box .pricing-message .pricing-text {
     padding-top: 20px;
     margin-bottom: 50px;
   }
@@ -542,4 +542,57 @@ img {
 }
 .time-answering .time-answering__box .time-answering__box-item3 {
   background-color: #DBFAA8;
+}
+
+.footer-box {
+  background-color: #DBFAA8;
+  height: 185px;
+  width: 100%;
+}
+.footer-box .footer-box__item {
+  margin: 0 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 100px;
+}
+.footer-box .footer-box__item .footer-box__item-messengers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  gap: 12px;
+  cursor: pointer;
+}
+.footer-box .footer-box__item .footer-box__item-messengers .icon-box img {
+  width: 16px;
+  height: 16px;
+}
+.footer-box .footer-box__item .footer-box__item-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 10px;
+  width: 100%;
+  border-top: 1px solid #000;
+}
+.footer-box .footer-box__item .footer-box__item-bottom .footer-box__item-bottom-date {
+  font-size: 12px;
+}
+.footer-box .footer-box__item .footer-box__item-bottom .footer-box__item-bottom-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 12px;
+  gap: 12px;
+  cursor: pointer;
 }
