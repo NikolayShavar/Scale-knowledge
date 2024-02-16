@@ -494,3 +494,52 @@ img {
   line-height: 15.6px;
   color: #504F4F;
 }
+
+.time-answering {
+  background-color: #0A0A0A;
+}
+.time-answering .time-answering__title {
+  font-family: roboto;
+  font-size: 60px;
+  line-height: 64px;
+  padding: 191px 173px 169px 120px;
+  color: #FAF9F7;
+}
+.time-answering .time-answering__box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding-bottom: 96px;
+  margin: 0 66px;
+}
+.time-answering .time-answering__box .borders {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 32px 45px 32px 32px;
+  border-radius: 12px;
+}
+.time-answering .time-answering__box .borders .time-answering__box-item__number {
+  font-size: 14px;
+  padding-bottom: 21px;
+}
+.time-answering .time-answering__box .borders .time-answering__box-item__name {
+  font-size: 28px;
+  padding-bottom: 30px;
+}
+.time-answering .time-answering__box .borders .time-answering__box-item__text {
+  font-size: 14px;
+}
+.time-answering .time-answering__box .time-answering__box-item1 {
+  background-color: #F4D2DC;
+}
+.time-answering .time-answering__box .time-answering__box-item2 {
+  background-color: #FBF19B;
+}
+.time-answering .time-answering__box .time-answering__box-item3 {
+  background-color: #DBFAA8;
+}
