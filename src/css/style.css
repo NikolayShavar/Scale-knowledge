@@ -544,6 +544,74 @@ img {
   background-color: #DBFAA8;
 }
 
+.leave-contacts {
+  position: relative;
+  background-color: #0A0A0A;
+  padding: 240px 180px 96px 180px;
+}
+.leave-contacts .leave-contacts-box {
+  position: relative;
+  border-radius: 24px;
+  z-index: 2;
+  background-color: #FBF19B;
+  padding: 91px 264px 112px 96px;
+}
+.leave-contacts .leave-contacts-box .leave-contacts__title {
+  font-family: roboto;
+  font-size: 48px;
+  line-height: 52.8px;
+  padding-bottom: 28px;
+  max-width: 300px;
+}
+.leave-contacts .leave-contacts-box .leave-contacts__text {
+  font-size: 16px;
+  line-height: 24px;
+  padding-bottom: 16px;
+  max-width: 400px;
+}
+.leave-contacts .leave-contacts-box .leave-contacts__input {
+  max-width: 480px;
+  border-bottom: 2px solid;
+}
+.leave-contacts .leave-contacts-box .leave-contacts__input input {
+  display: block;
+  background-color: #FBF19B;
+  border: none;
+  width: 480px;
+  height: 80px;
+  font-size: 48px;
+}
+.leave-contacts .leave-contacts-box .leave-contacts__agree {
+  padding-top: 54px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+}
+.leave-contacts .leave-contacts-box .leave-contacts__agree input {
+  border-radius: 4px;
+  background-color: #FBF19B;
+  cursor: pointer;
+}
+.leave-contacts .leave-contacts-box .leave-contacts__agree .leave-contacts__agree-con {
+  padding-left: 12px;
+  padding-top: 4px;
+}
+.leave-contacts .leave-contacts-box .leave-contacts__agree .leave-contacts__agree-privaty {
+  padding-left: 4px;
+  padding-top: 4px;
+  cursor: pointer;
+}
+.leave-contacts .leave-contacts-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  top: 2px;
+  right: 103px;
+}
+
 .footer-box {
   background-color: #DBFAA8;
   height: 185px;
