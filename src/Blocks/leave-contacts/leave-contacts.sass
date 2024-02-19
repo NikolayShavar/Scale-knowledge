@@ -2,12 +2,21 @@
     position: relative
     background-color: #0A0A0A
     padding: 240px 180px 96px 180px
+    @include media ($md)
+        padding: 170px 60px 40px 60px
+    @include media ($sm)
+        padding: 170px 10px 40px 10px
     .leave-contacts-box
         position: relative
         border-radius: 24px
         z-index: 2
         background-color: #FBF19B
         padding: 91px 264px 112px 96px
+        @include media ($lg)
+            padding: 40px 50px 50px 50px
+        @include media ($md-sm)
+            padding: 40px 20px 20px 20px
+
         .leave-contacts__title
             font-family: roboto
             font-size: 48px
@@ -22,13 +31,20 @@
         .leave-contacts__input
             max-width: 480px
             border-bottom: 2px solid
+            @include media ($lg)
+            max-width: 280px
             input
                 display: block
                 background-color: #FBF19B
+                white-space: nowrap
                 border: none
-                width: 480px
+                max-width: 480px
                 height: 80px
                 font-size: 48px
+                @include media ($lg)
+                    max-width: 280px
+                @include media ($sm)
+                    max-width: 250px
         .leave-contacts__agree
             padding-top: 54px
             display: flex

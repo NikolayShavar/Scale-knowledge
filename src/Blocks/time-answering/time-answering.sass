@@ -1,33 +1,47 @@
 .time-answering
     background-color: #0A0A0A
-    .time-answering__title
-        font-family: roboto
-        font-size: 60px
-        line-height: 64px
-        padding: 191px 173px 169px 120px
-        color: #FAF9F7
-    .time-answering__box
-        display: grid
-        grid-template-columns: repeat(3, 1fr)
-        gap: 12px
-        padding-bottom: 96px
-        margin: 0 66px
-        .borders
-            display: flex
-            flex-direction: column
-            padding: 32px 45px 32px 32px
-            border-radius: 12px
-            .time-answering__box-item__number
-                font-size: 14px
-                padding-bottom: 21px
-            .time-answering__box-item__name
-                font-size: 28px
-                padding-bottom: 30px
-            .time-answering__box-item__text
-                font-size: 14px
-        .time-answering__box-item1
-            background-color: #F4D2DC
-        .time-answering__box-item2
-            background-color: #FBF19B
-        .time-answering__box-item3
-            background-color: #DBFAA8
+    .container
+        @include media($lg)
+        padding: 0 10px
+        .time-answering__title
+            font-family: roboto
+            font-size: 60px
+            line-height: 64px
+            padding: 191px 173px 169px 120px
+            color: #FAF9F7
+            @include media ($md)
+                padding: 30px 20px 25px 20px
+                text-align: center
+            @include media ($md-sm)
+                font-size: 30px
+                line-height: 30px
+        .time-answering__box
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            gap: 12px
+            padding-bottom: 96px
+            margin: 0 66px
+            @include media($lg)
+                margin: 0 15px
+            @include media($md)
+                grid-template-columns: repeat(1, 3fr)
+                padding-bottom: 20px
+            .borders
+                display: flex
+                flex-direction: column
+                padding: 32px 45px 32px 32px
+                border-radius: 12px
+                .time-answering__box-item__number
+                    font-size: 14px
+                    padding-bottom: 21px
+                .time-answering__box-item__name
+                    font-size: 28px
+                    padding-bottom: 30px
+                .time-answering__box-item__text
+                    font-size: 14px
+            .time-answering__box-item1
+                background-color: #F4D2DC
+            .time-answering__box-item2
+                background-color: #FBF19B
+            .time-answering__box-item3
+                background-color: #DBFAA8

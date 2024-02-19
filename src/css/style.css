@@ -498,21 +498,47 @@ img {
 .time-answering {
   background-color: #0A0A0A;
 }
-.time-answering .time-answering__title {
+.time-answering .container {
+  padding: 0 10px;
+}
+.time-answering .container .time-answering__title {
   font-family: roboto;
   font-size: 60px;
   line-height: 64px;
   padding: 191px 173px 169px 120px;
   color: #FAF9F7;
 }
-.time-answering .time-answering__box {
+@media screen and (max-width: 767px) {
+  .time-answering .container .time-answering__title {
+    padding: 30px 20px 25px 20px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 539px) {
+  .time-answering .container .time-answering__title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+.time-answering .container .time-answering__box {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
   padding-bottom: 96px;
   margin: 0 66px;
 }
-.time-answering .time-answering__box .borders {
+@media screen and (max-width: 1279px) {
+  .time-answering .container .time-answering__box {
+    margin: 0 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .time-answering .container .time-answering__box {
+    grid-template-columns: repeat(1, 3fr);
+    padding-bottom: 20px;
+  }
+}
+.time-answering .container .time-answering__box .borders {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -523,24 +549,24 @@ img {
   padding: 32px 45px 32px 32px;
   border-radius: 12px;
 }
-.time-answering .time-answering__box .borders .time-answering__box-item__number {
+.time-answering .container .time-answering__box .borders .time-answering__box-item__number {
   font-size: 14px;
   padding-bottom: 21px;
 }
-.time-answering .time-answering__box .borders .time-answering__box-item__name {
+.time-answering .container .time-answering__box .borders .time-answering__box-item__name {
   font-size: 28px;
   padding-bottom: 30px;
 }
-.time-answering .time-answering__box .borders .time-answering__box-item__text {
+.time-answering .container .time-answering__box .borders .time-answering__box-item__text {
   font-size: 14px;
 }
-.time-answering .time-answering__box .time-answering__box-item1 {
+.time-answering .container .time-answering__box .time-answering__box-item1 {
   background-color: #F4D2DC;
 }
-.time-answering .time-answering__box .time-answering__box-item2 {
+.time-answering .container .time-answering__box .time-answering__box-item2 {
   background-color: #FBF19B;
 }
-.time-answering .time-answering__box .time-answering__box-item3 {
+.time-answering .container .time-answering__box .time-answering__box-item3 {
   background-color: #DBFAA8;
 }
 
@@ -549,12 +575,32 @@ img {
   background-color: #0A0A0A;
   padding: 240px 180px 96px 180px;
 }
+@media screen and (max-width: 767px) {
+  .leave-contacts {
+    padding: 170px 60px 40px 60px;
+  }
+}
+@media screen and (max-width: 459px) {
+  .leave-contacts {
+    padding: 170px 10px 40px 10px;
+  }
+}
 .leave-contacts .leave-contacts-box {
   position: relative;
   border-radius: 24px;
   z-index: 2;
   background-color: #FBF19B;
   padding: 91px 264px 112px 96px;
+}
+@media screen and (max-width: 1279px) {
+  .leave-contacts .leave-contacts-box {
+    padding: 40px 50px 50px 50px;
+  }
+}
+@media screen and (max-width: 539px) {
+  .leave-contacts .leave-contacts-box {
+    padding: 40px 20px 20px 20px;
+  }
 }
 .leave-contacts .leave-contacts-box .leave-contacts__title {
   font-family: roboto;
@@ -572,14 +618,26 @@ img {
 .leave-contacts .leave-contacts-box .leave-contacts__input {
   max-width: 480px;
   border-bottom: 2px solid;
+  max-width: 280px;
 }
 .leave-contacts .leave-contacts-box .leave-contacts__input input {
   display: block;
   background-color: #FBF19B;
+  white-space: nowrap;
   border: none;
-  width: 480px;
+  max-width: 480px;
   height: 80px;
   font-size: 48px;
+}
+@media screen and (max-width: 1279px) {
+  .leave-contacts .leave-contacts-box .leave-contacts__input input {
+    max-width: 280px;
+  }
+}
+@media screen and (max-width: 459px) {
+  .leave-contacts .leave-contacts-box .leave-contacts__input input {
+    max-width: 250px;
+  }
 }
 .leave-contacts .leave-contacts-box .leave-contacts__agree {
   padding-top: 54px;
