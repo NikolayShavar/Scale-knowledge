@@ -507,11 +507,11 @@ img {
   line-height: 64px;
   padding: 191px 173px 169px 120px;
   color: #FAF9F7;
+  text-align: center;
 }
 @media screen and (max-width: 767px) {
   .time-answering .container .time-answering__title {
     padding: 30px 20px 25px 20px;
-    text-align: center;
   }
 }
 @media screen and (max-width: 539px) {
