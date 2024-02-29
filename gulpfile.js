@@ -19,21 +19,20 @@ const pug = require('gulp-pug');
 function pughtml() {
   
   return src('src/pages/*.pug')
-  .pipe(pug())
-  .pipe(dest('src/pages/'))
-  .pipe(dest('app/pages/'))
+  .pipe(pug({pretty: '\t',}))
+  .pipe(dest('app/'))
   .pipe(browserSync.stream())
 }
 
-function pages() {
-  return src('src/pages/*.html')
-  .pipe(include({
-    includePaths:'src/components'
-  }))
-  .pipe(dest('src'))
-  .pipe(dest('app'))
-  .pipe(browserSync.stream())
-}
+// function pages() {
+//   return src('src/pages/*.html')
+//   .pipe(include({
+//     includePaths:'src/components'
+//   }))
+//   .pipe(dest('src'))
+//   .pipe(dest('app'))
+//   .pipe(browserSync.stream())
+// }
 
 function fonts () {
   return src('src/fonts/*.*')
@@ -59,7 +58,6 @@ return src('src/images/*.svg')
   }
 }))
 .pipe(dest('app/images'))
-.pipe(dest('src/images'))
 }
 
 
@@ -92,7 +90,7 @@ function watching() {            //СЛЕДИЛКА и Живой сервер
   watch(['src/sass/*.sass','src/blocks/**/*.sass'], styles)
   watch(['src/images'], images)
   watch(['src/js/main.js', 'src/blocks/**/*.js'], scripts)
-  watch(['src/components/*','app/pages/*' ], pages)
+  // watch(['src/components/*','app/pages/*' ], pages)
   watch(['src/**/*.html']).on('change', browserSync.reload);
 }
 
@@ -109,23 +107,11 @@ function styles () {            //обработчик Стилей
   return src('src/sass/style.sass')
   .pipe(sass())
   .pipe(autoprefixer({ overrideBrowserslist: ['last 10 version']}))
-  .pipe(dest('src/css'))
   .pipe(sass({outputStyle: 'compressed' }))
   .pipe(rename('style.min.css'))
   .pipe(dest('app/css'))
   .pipe(browserSync.stream())
 }
-
-
-
-function resetstyle () {
-  return src ('src/css/reset.css')
-  .pipe(autoprefixer({ overrideBrowserslist: ['last 10 version']}))
-  .pipe(sass({outputStyle: 'compressed' }))
-  .pipe(rename('reset.min.css'))
-  .pipe(dest('app/css'))
-  .pipe(browserSync.stream())
-} 
 
 
 
@@ -149,9 +135,9 @@ exports.watching = watching;
 exports.images = images;
 exports.sprite = sprite;
 exports.fonts = fonts;
-exports.pages = pages;
+// exports.pages = pages;
 exports.pughtml = pughtml;
-exports.resetstyle = resetstyle;
 
-exports.clean = series(cleanapp, html, styles, resetstyle, scripts)
-exports.default = parallel(pughtml, html ,styles, resetstyle, scripts, images, pages, watching);
+
+exports.clean = series(cleanapp, html, styles, scripts)
+exports.default = parallel(pughtml, html ,styles, scripts, images, watching);
