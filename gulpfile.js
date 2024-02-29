@@ -24,15 +24,6 @@ function pughtml() {
   .pipe(browserSync.stream())
 }
 
-// function pages() {
-//   return src('src/pages/*.html')
-//   .pipe(include({
-//     includePaths:'src/components'
-//   }))
-//   .pipe(dest('src'))
-//   .pipe(dest('app'))
-//   .pipe(browserSync.stream())
-// }
 
 function fonts () {
   return src('src/fonts/*.*')
@@ -90,7 +81,6 @@ function watching() {            //СЛЕДИЛКА и Живой сервер
   watch(['src/sass/*.sass','src/blocks/**/*.sass'], styles)
   watch(['src/images'], images)
   watch(['src/js/main.js', 'src/blocks/**/*.js'], scripts)
-  // watch(['src/components/*','app/pages/*' ], pages)
   watch(['src/**/*.html']).on('change', browserSync.reload);
 }
 
@@ -135,7 +125,6 @@ exports.watching = watching;
 exports.images = images;
 exports.sprite = sprite;
 exports.fonts = fonts;
-// exports.pages = pages;
 exports.pughtml = pughtml;
 
 
