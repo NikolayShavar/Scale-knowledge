@@ -49,7 +49,6 @@ return src('src/images/*.svg')
   }
 }))
 .pipe(dest('app/images'))
-.pipe(dest('src/images'))
 }
 
 
